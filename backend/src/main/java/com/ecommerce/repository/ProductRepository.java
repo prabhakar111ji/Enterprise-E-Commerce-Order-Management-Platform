@@ -13,11 +13,11 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     Page<Product> findByCategory(String category, Pageable pageable);
 
-    @Query("SELECT p FROM Product p WHERE LOWER(p.name) LIKE LOWER(CONCAT('%', :search, '%'))")
+    @Query("SELECT p FROM Product p WHERE LOWER(p.name) LIKE LOWER(CONCAT('%', cast(:search as string), '%'))")
     Page<Product> searchByName(@Param("search") String search, Pageable pageable);
 
     @Query("SELECT p FROM Product p WHERE (:category IS NULL OR p.category = :category) " +
-           "AND (:search IS NULL OR LOWER(p.name) LIKE LOWER(CONCAT('%', :search, '%')))")
+           "AND (:search IS NULL OR LOWER(p.name) LIKE LOWER(CONCAT('%', cast(:search as string), '%')))")
     Page<Product> findByFilters(@Param("category") String category,
                                 @Param("search") String search,
                                 Pageable pageable);

@@ -61,7 +61,7 @@ export default function MyOrders() {
                     <td>#{order.id}</td>
                     <td>{new Date(order.createdAt).toLocaleDateString()}</td>
                     <td>{order.items?.length || 0} items</td>
-                    <td style={{ fontWeight: 600 }}>${order.totalAmount?.toFixed(2)}</td>
+                    <td style={{ fontWeight: 600 }}>₹{order.totalAmount?.toFixed(2)}</td>
                     <td>{getStatusBadge(order.status)}</td>
                     <td>
                       <Link to={`/orders/${order.id}`} className="btn btn-outline btn-sm">View</Link>

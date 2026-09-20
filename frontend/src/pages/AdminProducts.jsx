@@ -99,7 +99,7 @@ export default function AdminProducts() {
                 </select>
               </div>
               <div className="form-group">
-                <label>Price ($)</label>
+                <label>Price (₹)</label>
                 <input type="number" step="0.01" required min="0.01" value={form.price}
                   onChange={(e) => setForm({ ...form, price: e.target.value })} />
               </div>
@@ -144,7 +144,7 @@ export default function AdminProducts() {
                     <td>{p.id}</td>
                     <td style={{ fontWeight: 500 }}>{p.name}</td>
                     <td>{p.category}</td>
-                    <td>${p.price?.toFixed(2)}</td>
+                    <td>₹{p.price?.toFixed(2)}</td>
                     <td><span className={p.stock > 0 ? '' : 'badge badge-cancelled'}>{p.stock}</span></td>
                     <td style={{ display: 'flex', gap: '0.5rem' }}>
                       <button className="btn btn-outline btn-sm" onClick={() => editProduct(p)}>Edit</button>

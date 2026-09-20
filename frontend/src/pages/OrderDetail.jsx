@@ -50,7 +50,7 @@ export default function OrderDetail() {
             </p>
           </div>
           <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--primary)' }}>
-            ${order.totalAmount?.toFixed(2)}
+            ₹{order.totalAmount?.toFixed(2)}
           </div>
         </div>
       </div>
@@ -70,9 +70,9 @@ export default function OrderDetail() {
               {order.items?.map((item, i) => (
                 <tr key={i}>
                   <td style={{ fontWeight: 500 }}>{item.productName}</td>
-                  <td>${item.price?.toFixed(2)}</td>
+                  <td>₹{item.price?.toFixed(2)}</td>
                   <td>{item.quantity}</td>
-                  <td style={{ fontWeight: 600 }}>${item.subtotal?.toFixed(2)}</td>
+                  <td style={{ fontWeight: 600 }}>₹{item.subtotal?.toFixed(2)}</td>
                 </tr>
               ))}
             </tbody>

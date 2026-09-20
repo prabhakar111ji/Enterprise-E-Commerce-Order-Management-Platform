@@ -75,7 +75,7 @@ export default function AdminDashboard() {
                     <td>#{order.id}</td>
                     <td>{new Date(order.createdAt).toLocaleDateString()}</td>
                     <td>{order.items?.length || 0}</td>
-                    <td style={{ fontWeight: 600 }}>${order.totalAmount?.toFixed(2)}</td>
+                    <td style={{ fontWeight: 600 }}>₹{order.totalAmount?.toFixed(2)}</td>
                     <td>{getStatusBadge(order.status)}</td>
                     <td>
                       <select

@@ -1,3 +1,10 @@
+PS F:\1Placement\Projects\Enterprise E-Commerce & Order Management Platform> docker compose up postres redis kafka -d
+no such service: postres
+
+What's next:
+    Debug this Compose error with Gordon → docker ai "help me fix this compose error"
+PS F:\1Placement\Projects\Enterprise E-Commerce & Order Management Platform> 
+
 # Enterprise E-Commerce & Order Management Platform
 
 A full-stack e-commerce application. Using Java 21, Spring Boot 3.x, Spring Security + JWT, JPA/Hibernate, PostgreSQL, Redis, Kafka, React + Vite, Docker, and testing — all in a clean, modular monolith.

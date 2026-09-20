@@ -45,7 +45,7 @@ export default function ProductDetail() {
           <div className="product-detail-info">
             <span className="product-category">{product.category}</span>
             <h1>{product.name}</h1>
-            <div className="price">${product.price?.toFixed(2)}</div>
+            <div className="price">₹{product.price?.toFixed(2)}</div>
             <p style={{ color: '#64748b', marginBottom: '1.5rem' }}>{product.description}</p>
             <div className={`product-stock ${product.stock > 0 ? '' : 'out'}`} style={{ marginBottom: '1.5rem', fontSize: '1rem' }}>
               {product.stock > 0 ? `✓ ${product.stock} in stock` : '✕ Out of stock'}

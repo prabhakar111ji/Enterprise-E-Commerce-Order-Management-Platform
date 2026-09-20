@@ -27,7 +27,7 @@ public class ProductService {
     private final ProductMapper productMapper;
 
     /** Get all products with optional filtering. Cached in Redis for fast reads. */
-    @Cacheable(value = "products", key = "'list-' + #category + '-' + #search + '-' + #pageable.pageNumber")
+    // @Cacheable(value = "products", key = "'list-' + #category + '-' + #search + '-' + #pageable.pageNumber")
     public Page<ProductResponse> getProducts(String category, String search, Pageable pageable) {
         Page<Product> products = productRepository.findByFilters(category, search, pageable);
         return products.map(productMapper::toResponse);

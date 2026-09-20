@@ -74,7 +74,7 @@ export default function Home() {
                   <div className="product-info">
                     <div className="product-category">{product.category}</div>
                     <div className="product-name">{product.name}</div>
-                    <div className="product-price">${product.price?.toFixed(2)}</div>
+                    <div className="product-price">₹{product.price?.toFixed(2)}</div>
                     <div className={`product-stock ${product.stock > 0 ? '' : 'out'}`}>
                       {product.stock > 0 ? `${product.stock} in stock` : 'Out of stock'}
                     </div>

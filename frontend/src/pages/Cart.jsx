@@ -77,7 +77,7 @@ export default function Cart() {
             <div key={item.productId} className="cart-item">
               <div className="cart-item-info">
                 <div className="cart-item-name">{item.productName}</div>
-                <div className="cart-item-price">${item.price?.toFixed(2)} each</div>
+                <div className="cart-item-price">₹{item.price?.toFixed(2)} each</div>
               </div>
               <div className="cart-item-actions">
                 <div className="qty-control">
@@ -85,7 +85,7 @@ export default function Cart() {
                   <span style={{ fontWeight: 600, minWidth: '24px', textAlign: 'center' }}>{item.quantity}</span>
                   <button onClick={() => updateQuantity(item.productId, item.quantity + 1)}>+</button>
                 </div>
-                <span style={{ fontWeight: 700, minWidth: '80px', textAlign: 'right' }}>${item.subtotal?.toFixed(2)}</span>
+                <span style={{ fontWeight: 700, minWidth: '80px', textAlign: 'right' }}>₹{item.subtotal?.toFixed(2)}</span>
                 <button className="btn btn-danger btn-sm" onClick={() => removeItem(item.productId)}>Remove</button>
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function Cart() {
           <div className="cart-summary">
             <div className="cart-total">
               <span>Total</span>
-              <span>${cart.totalPrice?.toFixed(2)}</span>
+              <span>₹{cart.totalPrice?.toFixed(2)}</span>
             </div>
             <button className="btn btn-success btn-block" onClick={placeOrder} disabled={ordering}>
               {ordering ? 'Placing Order...' : 'Place Order'}
