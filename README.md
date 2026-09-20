@@ -1,9 +1,3 @@
-PS F:\1Placement\Projects\Enterprise E-Commerce & Order Management Platform> docker compose up postres redis kafka -d
-no such service: postres
-
-What's next:
-    Debug this Compose error with Gordon → docker ai "help me fix this compose error"
-PS F:\1Placement\Projects\Enterprise E-Commerce & Order Management Platform> 
 
 # Enterprise E-Commerce & Order Management Platform
 
