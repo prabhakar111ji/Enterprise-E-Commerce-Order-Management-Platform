@@ -1,6 +1,6 @@
 # Enterprise E-Commerce & Order Management Platform
 
-A full-stack e-commerce application built for **campus placement interview mastery**. Covers Java 21, Spring Boot 3.x, Spring Security + JWT, JPA/Hibernate, PostgreSQL, Redis, Kafka, React + Vite, Docker, and testing — all in a clean, modular monolith.
+A full-stack e-commerce application. Using Java 21, Spring Boot 3.x, Spring Security + JWT, JPA/Hibernate, PostgreSQL, Redis, Kafka, React + Vite, Docker, and testing — all in a clean, modular monolith.
 
 ## ✨ Features
 
